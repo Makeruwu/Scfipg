@@ -1,1 +1,102 @@
 
+--Made by Nathan
+--Multi Purpose Game Supported!
+wait (2)
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Gamebreaker V1.1 ( Mobile )", red)
+
+local Tab = Window:NewTab("Info")
+local InfoSection = Tab:NewSection("Developer")
+local InfoSection = Tab:NewSection("Nathan")
+
+local Tab = Window:NewTab("Scripts")
+local HubSection = Tab:NewSection("Script Hub ( Click three dots  in each tab to see description )")
+HubSection:NewButton("S- Executor", "No Description", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Makeruwu/Scfipg/main/S-Nathan'))() 
+end)
+HubSection:NewButton("Dark Dex", "Allow you to see the code of the game", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/J8AX35Fg"))()
+end)
+HubSection:NewButton("Fly GUI + Keyboard ( Can crash your game )", "Just press fly and press w in virtual keyboard", function()
+    loadstring(game:HttpGet('https://pastebin.com/ETS3cnkF'))()
+end)
+local HubSection = Tab:NewSection("Lock")
+HubSection:NewButton("Shift-Lock", "Just press fly and press w in virtual keyboard", function()
+    loadstring(game:HttpGet('https://pastebin.com/rH1qk4tH'))()
+end)
+
+local Tab = Window:NewTab("Local Player")
+local PlaySection = Tab:NewSection("Local Player")
+PlaySection:NewSlider("Walkspeed", "Increase your speed", 5000, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+PlaySection:NewSlider("Jump Power", "Increase your jump power", 5000, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local Tab = Window:NewTab("Visual's")
+local VisSection = Tab:NewSection("THIS IS VISUAL !")
+VisSection:NewButton("Monster", "Allow you to transform", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/wC64LrAJ',true))()
+end)
+ 
+local Tab = Window:NewTab("Prison Life")
+local BroSection = Tab:NewSection("Misc")
+BroSection:NewDropdown("Give Guns", "Example", {"M9", "Remington 870", "AK-47"}, function(v)
+    local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver[v].ITEMPICKUP
+        local Event = game:GetService("Workspace").Remote.ItemHandler
+        Event:InvokeServer(A_1)
+    end)
+local TpSection = Tab:NewSection("Teleport")
+TpSection:NewButton("Crim Base", "Teleport's you to crim base", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-943.46,94.13,2063.63)
+end)
+TpSection:NewButton("Prison", "Teleport's you to prison", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(918.77,100,2379.07)
+end)
+TpSection:NewButton("Prison Yard", "Teleport's you to prison yard", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(779.87,98,2458.93)
+end)
+ 
+ local Tab = Window:NewTab("Pet Simulator X")
+local PetSection = Tab:NewSection("Auto-Farm GUI")
+PetSection:NewButton("Saza Hub", "Saza Hub is a powerfull pet simulator x script", function()
+    loadstring(game:HttpGet"https://scriptblox.com/raw/SAZA-HUB_496")()
+end)
+PetSection:NewButton("Dino Hub", "Dino Hub is a powerfull pet simulator x script same as Saza Hub", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/script/main/psx'))()
+end)
+
+local Tab = Window:NewTab("Clicker Simulator")
+local ClickSection = Tab:NewSection("Script")
+ClickSection:NewButton("GG Gui", "..", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kederal/script.gg/main/loader.lua"))()
+end)
+
+local Tab = Window:NewTab("More OP Script's")
+local OpSection = Tab:NewSection("Here ya go!")
+OpSection:NewButton("PrisonDestroyerV3", "", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/script/main/psx'))()
+end)
+
+local Tab = Window:NewTab("GUI Opener Tutorial")
+local GUISection = Tab:NewSection("Read Carefully!")
+local GUISection = Tab:NewSection("If you accidentally press X and dont know how to open?")
+local GUISection = Tab:NewSection("Just Press Q in your Keyboard")
+
+local Tab = Window:NewTab("Update")
+local FixSection = Tab:NewSection("Update Log V1.1")
+FixSection:NewDropdown("Update's", "..", {"Fix Double the gui", "Added Teleportation Menu for Prison Life", "Added Clicker Simulator Script"}, function(currentOption)
+    print(currentOption)
+end)
+local FixSection = Tab:NewSection("Gamebreaker V1.1")
+FixSection:NewKeybind("  ", "   ", Enum.KeyCode.Q, function()
+	print("You just clicked the bind")
+end)
+
+
+wait (4)
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "Gamebreaker V1.1 Loaded";
+Text = "Thanks for using Gamebreaker V1.1 ! A message from Nathan ( Owner )";
+})
